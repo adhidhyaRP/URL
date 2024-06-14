@@ -26,7 +26,7 @@ router.post('/signup', async (req, res) => {
             from: process.env.EMAIL_USER,
             to: email,
             subject: 'Signup Verification',
-            html: `<p>Click <a href="http://localhost:5173/login">here</a> to verify your email.</p>`
+            html: `<p>Click <a href="https://URLwithsignupverify.netlify.app/login">here</a> to verify your email.</p>`
         };
         await transporter.sendMail(mailOptions);
 
