@@ -12,7 +12,7 @@ router.post('/getshortURL', async (req, res) => {
         if (urlObj) return res.send(urlObj.shortURL);
 
         const shortcode = nanoid(7);
-        const shortURL = `https://URLwithsignupverify.netlify.app/${shortcode}`;
+        const shortURL = `https://urlwithsignupverify.onrender.com/${shortcode}`;
         urlObj = new URL({ URL: longURL, shortURL, shortcode });
         await urlObj.save();
         res.send(shortURL);
