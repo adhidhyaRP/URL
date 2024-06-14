@@ -73,7 +73,7 @@ router.post('/forgotpassword', async (req, res) => {
             from: process.env.EMAIL_USER,
             to: email,
             subject: 'Reset Password',
-            html: `<p>Click <a href="http://localhost:5173/resetpassword/${user._id}/${token}">here</a> to reset your password.</p>`
+            html: `<p>Click <a href="https://URLwithsignupverify.netlify.app/resetpassword/${user._id}/${token}">here</a> to reset your password.</p>`
         };
         await transporter.sendMail(mailOptions);
 
